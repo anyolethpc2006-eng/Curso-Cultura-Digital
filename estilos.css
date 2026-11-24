@@ -1,0 +1,65 @@
+/\*===================================================ESTILOS PERSONALIZADOS - CULTURA DIGITAL (estilos.css) Paleta: Celestito Pastel y Rosita Pastel 🩵🌸===================================================\*/ /\* 1\. Variables de Color e Identidad Visual \*/ :root {
+    --color-celeste: #0284c7;/\* Azul celeste \*/ --color-rosita: #f472b6;/\* Rosa pastel suave \*/ --borde-tarjeta: 4px solid #0284c7;
+}
+
+/\* 2\. Fondo Degradado: Celestito a Rosita Pastel \*/ body {
+    background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%) !important;
+    background-attachment: fixed !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/\* 3\. Encabezado en Celeste \*/ header .bg-primary {
+    background-color: var(--color-celeste) !important;
+}
+
+/\* 4\. Títulos de Sección Subrayados en Rosita \*/ .titulo-seccion {
+    color: #1e293b;
+    font-weight: 700;
+    border-bottom: 3px solid var(--color-rosita);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/\* 5\. Tarjetas Educativas \*/ .tarjeta-educativa {
+    border: none !important;
+    border-top: var(--borde-tarjeta) !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-educativa:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(244, 114, 182, 0.25) !important;
+}
+
+/\* 6\. Animación de Flotación Automática (Flota sola sin necesidad del mouse) \*/ @keyframes flotarSola {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);/\* Cuánto sube \*/
+    }
+
+    100% {
+        transform: translateY(0px);/\* Cuánto baja \*/
+    }
+}
+
+.img-flotante {
+    display: inline-block !important;
+    animation: flotarSola 3s ease-in-out infinite !important;
+}
+
+/\* 7\. Adaptabilidad para Celulares \*/ @media (max-width: 768px) {
+    .titulo-seccion {
+        font-size: 1.25rem;
+    }
+
+    .tarjeta-educativa {
+        border-top: none !important;
+        border-left: var(--borde-tarjeta) !important;
+    }
+}
